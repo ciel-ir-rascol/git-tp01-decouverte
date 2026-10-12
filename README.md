@@ -32,6 +32,20 @@ Ce TP se fait **entièrement sur votre poste**, dans le terminal. Pas besoin de 
 | **Éditeur de texte** | `nano` dans le terminal (ou l'éditeur de votre choix) |
 | **Navigateur** | pour GitHub |
 
+> [!TIP]
+> **Faire le TP chez soi, sous Windows (ou macOS)**
+>
+> Utilisez la VM Ubuntu Server des TPs : vous y retrouvez le terminal et les commandes du lycée.
+>
+> 1. Installez **VirtualBox 7**, puis téléchargez la VM sur Google Drive — connectez-vous avec votre compte **rascol.net** : [`UbuntuServer_TP_2026-10-12.ova`](https://drive.google.com/file/d/1YFFg--7t9_iR0x6Gb9NXu8n01Hx3OSQy/view?usp=sharing) (environ 300 Mo).
+> 2. Dans VirtualBox : **Fichier → Importer un appareil virtuel…** et sélectionnez le fichier.
+> 3. Réseau : laissez la carte en **NAT** et ajoutez une redirection pour SSH : **Configuration → Réseau → Avancé → Redirection de ports**, règle `TCP`, port hôte `2222`, port invité `22`.
+> 4. Démarrez la VM et **lisez l'écran avant de vous connecter** : le mot de passe propre à cette VM s'affiche au-dessus de l'invite `login:`. Notez-le (il reste ensuite dans `~/MOT-DE-PASSE.txt`).
+> 5. Connectez-vous depuis le **Terminal Windows** (ou PowerShell) : `ssh -p 2222 etudiant@127.0.0.1`. Copier : `Ctrl` + `Maj` + `C`, coller : `Ctrl` + `Maj` + `V`, comme au lycée.
+> 6. **Git n'est pas installé dans la VM** : avant la partie 0, lancez `sudo apt update` puis `sudo apt install git`.
+>
+> Ensuite, tout se passe comme sur le poste du lycée : votre terminal est la session SSH (pas besoin de `Ctrl` + `Alt` + `T`). En partie 5, la clé SSH est créée **dans la VM** : donnez-lui sur GitHub un titre comme `VM maison`.
+
 ### Rappels `nano`
 
 | Touches | Action |
